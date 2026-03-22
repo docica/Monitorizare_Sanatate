@@ -1,0 +1,18 @@
+C:\Users\pitud\Desktop\PIU\Monitorizare_Sanatate\Monitorizare_Sanatate\obj\Debug\net8.0\Monitorizare_Sanatate.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pitud\Desktop\PIU\Monitorizare_Sanatate\Monitorizare_Sanatate\obj\Debug\net8.0\Monitorizare_Sanatate.AssemblyInfoInputs.cache
+C:\Users\pitud\Desktop\PIU\Monitorizare_Sanatate\Monitorizare_Sanatate\obj\Debug\net8.0\Monitorizare_Sanatate.AssemblyInfo.cs
+C:\Users\pitud\Desktop\PIU\Monitorizare_Sanatate\Monitorizare_Sanatate\obj\Debug\net8.0\Monitorizare_Sanatate.csproj.CoreCompileInputs.cache
+C:\Users\pitud\Desktop\an 2 facultate\PIU\Monitorizare_Sanatate\Monitorizare_Sanatate\obj\Debug\net8.0\Monitorizare_Sanatate.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pitud\Desktop\an 2 facultate\PIU\Monitorizare_Sanatate\Monitorizare_Sanatate\obj\Debug\net8.0\Monitorizare_Sanatate.AssemblyInfoInputs.cache
+C:\Users\pitud\Desktop\an 2 facultate\PIU\Monitorizare_Sanatate\Monitorizare_Sanatate\obj\Debug\net8.0\Monitorizare_Sanatate.AssemblyInfo.cs
+C:\Users\pitud\Desktop\an 2 facultate\PIU\Monitorizare_Sanatate\Monitorizare_Sanatate\obj\Debug\net8.0\Monitorizare_Sanatate.csproj.CoreCompileInputs.cache
+C:\Users\pitud\Desktop\an 2 facultate\PIU\Monitorizare_Sanatate\Monitorizare_Sanatate\bin\Debug\net8.0\Monitorizare_Sanatate.exe
+C:\Users\pitud\Desktop\an 2 facultate\PIU\Monitorizare_Sanatate\Monitorizare_Sanatate\bin\Debug\net8.0\Monitorizare_Sanatate.deps.json
+C:\Users\pitud\Desktop\an 2 facultate\PIU\Monitorizare_Sanatate\Monitorizare_Sanatate\bin\Debug\net8.0\Monitorizare_Sanatate.runtimeconfig.json
+C:\Users\pitud\Desktop\an 2 facultate\PIU\Monitorizare_Sanatate\Monitorizare_Sanatate\bin\Debug\net8.0\Monitorizare_Sanatate.dll
+C:\Users\pitud\Desktop\an 2 facultate\PIU\Monitorizare_Sanatate\Monitorizare_Sanatate\bin\Debug\net8.0\Monitorizare_Sanatate.pdb
+C:\Users\pitud\Desktop\an 2 facultate\PIU\Monitorizare_Sanatate\Monitorizare_Sanatate\obj\Debug\net8.0\Monitorizare_Sanatate.dll
+C:\Users\pitud\Desktop\an 2 facultate\PIU\Monitorizare_Sanatate\Monitorizare_Sanatate\obj\Debug\net8.0\refint\Monitorizare_Sanatate.dll
+C:\Users\pitud\Desktop\an 2 facultate\PIU\Monitorizare_Sanatate\Monitorizare_Sanatate\obj\Debug\net8.0\Monitorizare_Sanatate.pdb
+C:\Users\pitud\Desktop\an 2 facultate\PIU\Monitorizare_Sanatate\Monitorizare_Sanatate\obj\Debug\net8.0\Monitorizare_Sanatate.genruntimeconfig.cache
+C:\Users\pitud\Desktop\an 2 facultate\PIU\Monitorizare_Sanatate\Monitorizare_Sanatate\obj\Debug\net8.0\ref\Monitorizare_Sanatate.dll

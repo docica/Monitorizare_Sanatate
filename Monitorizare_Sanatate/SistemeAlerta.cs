@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace Monitorizare_Sanatate
+using Monitorizare_Sanatate.Models;
+namespace Monitorizare_Sanatate.Data
 {
-    internal class SistemeAlerta
+    public class SistemeAlerta
     {
         public string VerificareGlicemie(MasuratoriGlicemie masuratori)
         {

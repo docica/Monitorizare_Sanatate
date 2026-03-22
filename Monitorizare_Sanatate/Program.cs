@@ -1,10 +1,13 @@
-﻿namespace Monitorizare_Sanatate
+﻿using Monitorizare_Sanatate.Data;
+using Monitorizare_Sanatate.Models;
+
+namespace Monitorizare_Sanatate
 {
     class Program
     {
         static List<MasuratoriGlicemie> listaGlicemie = new List<MasuratoriGlicemie>();
         static List<MasuratoriCardiovasculare> listaTensiune = new List<MasuratoriCardiovasculare>();
-        static List<Pacient> listaPacienti = new List<Pacient>();
+        static AdministratorPacienti admin = new AdministratorPacienti();
         static Pacient pacientNou = null;
         static void Main(string[] args)
         {
@@ -44,7 +47,7 @@
                         Console.WriteLine("Introduceti numarul de telefon al pacientului: ");
                         string telefon = Console.ReadLine();
                         pacientNou = new Pacient(nume, prenume, dataNasterii, email, telefon);
-                        listaPacienti.Add(pacientNou);
+                        admin.AdaugaPacient(pacientNou);
                         break;
                     case "2":
                         if (pacientNou != null)
@@ -92,18 +95,16 @@
                         }
                         break;
                     case "5":
-                        if (pacientNou != null)
+                        
+                        Console.WriteLine("Introduceti numele pacientului: ");
+                        string numeCautat = Console.ReadLine();
+                        var pacientGasit = admin.CautaDupaNume(numeCautat);
+                        if(pacientGasit.Any())
                         {
-                            Console.WriteLine("Introduceti numele pacientului: ");
-                            string numeCautat = Console.ReadLine();
-                            foreach (Pacient pacient in listaPacienti)
+                            foreach(var pacient in pacientGasit)
                             {
-                                if (pacient.Nume.Equals(numeCautat, StringComparison.OrdinalIgnoreCase))
-                                {
-                                    Console.WriteLine(pacient.ToString());
-                                }
+                                Console.WriteLine(pacient);
                             }
-
                         }
                         else
                         {
