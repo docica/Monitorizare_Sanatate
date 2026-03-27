@@ -8,6 +8,7 @@ namespace Monitorizare_Sanatate.Models
 {
     public class Pacient
     {
+        public int IdPacient { get; set; }
         public string Nume { get; set; }
         public string Prenume { get; set; }
         public DateTime DataNasterii { get; set; }

@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="10.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Monitorizare_Sanatate.Data\Monitorizare_Sanatate.Data.csproj" />
     <ProjectReference Include="..\Monitorizare_Sanatate.Models\Monitorizare_Sanatate.Models.csproj" />
   </ItemGroup>
