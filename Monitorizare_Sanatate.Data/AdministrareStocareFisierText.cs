@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Monitorizare_Sanatate.Data
 {
-    public class AdministrareStocareFisierText
+    public class AdministrareStocareFisierText : IStocareData
     {
+        private string numeFisier;
+
+        public AdministrareStocareFisierText(string numeFisier)
+        {
+            this.numeFisier = numeFisier;
+        }
+
     }
 }

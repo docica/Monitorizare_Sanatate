@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Monitorizare_Sanatate.Data
 {
-    public class AdministrareStocareMemorie
+    public class AdministrareStocareMemorie :IStocareData
     {
         private List<Pacient> pacienti = new();
         public void AddPacient(Pacient pacient)
