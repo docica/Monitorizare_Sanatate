@@ -7,12 +7,12 @@ namespace Monitorizare_Sanatate
     {
         static List<MasuratoriGlicemie> listaGlicemie = new List<MasuratoriGlicemie>();
         static List<MasuratoriCardiovasculare> listaTensiune = new List<MasuratoriCardiovasculare>();
-        static AdministratorPacienti admin = new AdministratorPacienti();
+        static IStocareData admin = new AdministrareStocareFisierText("pacienti.txt");
         static Pacient pacientNou = null;
         static void Main(string[] args)
         {
             Console.WriteLine("Monitorizare sanatatii pacientilor");
-            Pacient pacient1 = new Pacient("Rusu", "Luiza", new DateTime(1989,06,04) , "rusu_luiza@gmail.com", "0756337910");
+            Pacient pacient1 = new Pacient(1,"Rusu", "Luiza", new DateTime(1989,06,04) , "rusu_luiza@gmail.com", "0756337910");
             MasuratoriGlicemie glicemie1 = new MasuratoriGlicemie(new DateTime(2024,08,10),  90, "mg/dl", pacient1);
             MasuratoriCardiovasculare tensiune1 = new MasuratoriCardiovasculare(new DateTime(2024,08,10), 150, 90, 100, pacient1);
             SistemeAlerta alerta = new SistemeAlerta();
@@ -27,15 +27,19 @@ namespace Monitorizare_Sanatate
             {
                 Console.WriteLine("1.Citire informatii pacient de la tastatura");
                 Console.WriteLine("2.Afisare informatii pacient");
-                Console.WriteLine("3.Afisare istoric valori glicemie");
-                Console.WriteLine("4.Afisare istoric valori tensiune arteriala");
+                Console.WriteLine("3.Adauga valori glicemie");
+                Console.WriteLine("4.Adauga valori tensiune arteriala");
                 Console.WriteLine("5.Cauta pacient dupa nume");
-                Console.WriteLine("6.Inchide programul");
-                Console.WriteLine("7.Alegeti optiunea dorita:");
+                Console.WriteLine("6.Afisare istoric glicemie");
+                Console.WriteLine("7.Afisare istoric tensiune");
+                Console.WriteLine("8.Inchide programul");
+                Console.WriteLine("Alegeti optiunea dorita:");
                 optiune = Console.ReadLine();
                 switch (optiune)
                 {
                     case "1":
+                        Console.WriteLine("Introduceti ID-ul pacientului: ");
+                        int idPacient = int.Parse(Console.ReadLine());
                         Console.WriteLine("Introduceti numele pacientului: ");
                         string nume = Console.ReadLine();
                         Console.WriteLine("Introduceti prenumele pacientului: ");
@@ -46,8 +50,9 @@ namespace Monitorizare_Sanatate
                         string email = Console.ReadLine();
                         Console.WriteLine("Introduceti numarul de telefon al pacientului: ");
                         string telefon = Console.ReadLine();
-                        pacientNou = new Pacient(nume, prenume, dataNasterii, email, telefon);
-                        admin.AdaugaPacient(pacientNou);
+                        pacientNou = new Pacient(idPacient, nume, prenume, dataNasterii, email, telefon);
+                        admin.AddPacient(pacientNou);
+                        Console.WriteLine("Informatiile despre pacient au fost salvate in fisier");
                         break;
                     case "2":
                         if (pacientNou != null)
@@ -113,6 +118,35 @@ namespace Monitorizare_Sanatate
                         }
                         break;
                     case "6":
+                        if (listaGlicemie.Any())
+                        {
+                            Console.WriteLine("Istoric glicemie:");
+                            foreach (var glicemie in listaGlicemie)
+                            {
+                                Console.WriteLine(glicemie);
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("Nu exista valori de glicemie in istoric");
+                        }
+                        break;
+                    case "7":
+                        if (listaTensiune.Any())
+                        {
+                            Console.WriteLine("Istoric tensiune:");
+                            foreach (var tensiune in listaTensiune)
+                            {
+                                Console.WriteLine(tensiune);
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("Nu exista valori de tensiune in istoric");
+                        }
+                        break;
+
+                    case "8":
                         Console.WriteLine("Aplicatia va fi inchisa");
                         return;
 

@@ -26,5 +26,7 @@ namespace Monitorizare_Sanatate.Models
             return $"Data Masurare:{DataMasurare.ToShortDateString()},Tensiune:{TensiuneaSistolica} / {TensiuneaDiastolica},Puls:{Puls}, Pacient: {Pacient}  ";
         }
 
+        public MasuratoriCardiovasculare()
+        { }
     }
 }

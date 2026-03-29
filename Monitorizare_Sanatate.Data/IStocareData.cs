@@ -11,6 +11,7 @@ namespace Monitorizare_Sanatate.Data
     {
         void AddPacient(Pacient pacient);
         List<Pacient> GetPacienti();
+        List<Pacient> CautaDupaNume(string nume);
         Pacient GetPacient(int idPacient);
         Pacient GetPacient(string nume, string prenume, DateTime dataNasterii, string email, string telefon);
         bool UpdatePacient(Pacient Pacient);
