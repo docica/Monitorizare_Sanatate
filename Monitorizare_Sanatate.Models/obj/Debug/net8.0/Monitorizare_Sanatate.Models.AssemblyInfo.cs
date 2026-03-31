@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Monitorizare_Sanatate.Models")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f2c0a4e34765459a25dc941919244879cf037d76")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0841cdffa4bff20a5988f329dc7d50e2725c4e54")]
 [assembly: System.Reflection.AssemblyProductAttribute("Monitorizare_Sanatate.Models")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Monitorizare_Sanatate.Models")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
