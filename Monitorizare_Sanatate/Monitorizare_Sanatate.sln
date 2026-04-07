@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monitorizare_Sanatate.Data"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monitorizare_Sanatate.Models", "..\Monitorizare_Sanatate.Models\Monitorizare_Sanatate.Models.csproj", "{75F8248C-FC70-1EFF-3169-31082F5D0DE2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monitorizare_Sanatate.UI", "..\Monitorizare_Sanatate.UI\Monitorizare_Sanatate.UI.csproj", "{2967613C-ADD6-46A5-BF1D-5647469C5298}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{75F8248C-FC70-1EFF-3169-31082F5D0DE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75F8248C-FC70-1EFF-3169-31082F5D0DE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75F8248C-FC70-1EFF-3169-31082F5D0DE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2967613C-ADD6-46A5-BF1D-5647469C5298}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2967613C-ADD6-46A5-BF1D-5647469C5298}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2967613C-ADD6-46A5-BF1D-5647469C5298}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2967613C-ADD6-46A5-BF1D-5647469C5298}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

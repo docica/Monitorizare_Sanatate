@@ -32,7 +32,8 @@ namespace Monitorizare_Sanatate
                 Console.WriteLine("5.Cauta pacient dupa nume");
                 Console.WriteLine("6.Afisare istoric glicemie");
                 Console.WriteLine("7.Afisare istoric tensiune");
-                Console.WriteLine("8.Inchide programul");
+                Console.WriteLine("8. Afisare lista completa pacienti din fisier");
+                Console.WriteLine("9.Inchide programul");
                 Console.WriteLine("Alegeti optiunea dorita:");
                 optiune = Console.ReadLine();
                 switch (optiune)
@@ -145,8 +146,24 @@ namespace Monitorizare_Sanatate
                             Console.WriteLine("Nu exista valori de tensiune in istoric");
                         }
                         break;
-
                     case "8":
+                        List<Pacient> pacienti = admin.GetPacienti();
+                        if (pacienti != null && pacienti.Any())
+                        {
+                            Console.WriteLine("\n--- LISTA PACIENTI ---");
+                            foreach (var p in pacienti)
+                            {
+                                Console.WriteLine(p.ToString());
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("Fisierul este gol sau nu a putut fi citit.");
+                        }
+                        break;
+
+
+                    case "9":
                         Console.WriteLine("Aplicatia va fi inchisa");
                         return;
 

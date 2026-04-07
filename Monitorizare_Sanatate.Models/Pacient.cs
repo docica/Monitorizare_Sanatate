@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,7 +26,7 @@ namespace Monitorizare_Sanatate.Models
         public string Telefon { get; set; }
         public Pacient(int idPacient, string nume, string prenume, DateTime dataNasterii, string email, string telefon)
         {
-            IdPacient = IdPacient;
+            IdPacient = idPacient;
             Nume = nume;
             Prenume = prenume;
             DataNasterii = dataNasterii;
@@ -44,14 +45,14 @@ namespace Monitorizare_Sanatate.Models
             this.IdPacient = int.Parse(dateFisier[ID]);
             this.Nume = dateFisier[NUME];
             this.Prenume = dateFisier[PRENUME];
-            this.DataNasterii = DateTime.Parse(dateFisier[DATA_NASTERII]);
+            this.DataNasterii = DateTime.Parse(dateFisier[DATA_NASTERII], CultureInfo.InvariantCulture);
             this.Email = dateFisier[EMAIL];
             this.Telefon = dateFisier[TELEFON];
         }
 
         public string ConversieLaSirPentruFisier()
         {
-            string obiectPacientPentrFisier = string.Format("{1}{0}{2}{0}{3}{0}{4}{0}{5}{0}{6}", SEPARATOR_PRINCIPAL_FISIER,
+                string obiectPacientPentrFisier = string.Format("{1}{0}{2}{0}{3}{0}{4}{0}{5}{0}{6}", SEPARATOR_PRINCIPAL_FISIER,
                 IdPacient.ToString(),
                 (Nume ?? "NECUNOSCUT"),
                 (Prenume ?? "NECUNOSCUT"),

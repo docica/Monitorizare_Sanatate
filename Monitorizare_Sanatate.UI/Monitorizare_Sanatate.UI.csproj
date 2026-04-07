@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Monitorizare_Sanatate.Data\Monitorizare_Sanatate.Data.csproj" />
+    <ProjectReference Include="..\Monitorizare_Sanatate.Models\Monitorizare_Sanatate.Models.csproj" />
+    <ProjectReference Include="..\Monitorizare_Sanatate\Monitorizare_Sanatate.csproj" />
+  </ItemGroup>
+
+</Project>
