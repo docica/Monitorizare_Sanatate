@@ -5,51 +5,56 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Monitorizare_Sanatate.UI"
         mc:Ignorable="d"
-        Title="Monitorizare Sanatate" Height="500" Width="800">
+        Title="Monitorizare Sanatate" Height="750" Width="800">
     <Grid>
         <Border BorderBrush="#EAF6FB" BorderThickness="15" Margin="12">
             <StackPanel Margin="20">
                 <TextBlock Text="Date pacient" FontSize="24" FontWeight="Bold" Foreground="Navy"
                            HorizontalAlignment="Center" Margin="0, 0, 0, 20"/>
 
-                <ListBox x:Name="ListBoxPacienti" Height="350" Margin="5">
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <Grid Margin="10">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="150"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                </Grid.RowDefinitions>
+                <GroupBox Header="Adăugare Pacient" Margin="0,0,0,20" Padding="10">
+                    <StackPanel>
+                        <Grid HorizontalAlignment="Center">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="250"/>
+                            </Grid.ColumnDefinitions>
 
-                                <TextBlock Grid.Row="0" Grid.Column="0" Text="Id:" FontSize="18" FontWeight="Bold" Margin="5"/>
-                                <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding IdPacient}" FontSize="18" FontStyle="Italic" Margin="5"/>
+                            <Label x:Name="lblNume" Content="Nume:" Grid.Row="0" Grid.Column="0" Margin="5" VerticalAlignment="Center"/>
+                            <TextBox x:Name="txtNume" Grid.Row="0" Grid.Column="1" Margin="5" Height="25"/>
 
-                                <TextBlock Grid.Row="1" Grid.Column="0" Text="Nume:" FontSize="18" FontWeight="Bold" Margin="5"/>
-                                <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Nume}" FontSize="18" FontStyle="Italic" Margin="5"/>
+                            <Label x:Name="lblPrenume" Content="Prenume:" Grid.Row="1" Grid.Column="0" Margin="5" VerticalAlignment="Center"/>
+                            <TextBox x:Name="txtPrenume" Grid.Row="1" Grid.Column="1" Margin="5" Height="25"/>
 
-                                <TextBlock Grid.Row="2" Grid.Column="0" Text="Prenume: " FontSize="18" FontWeight="Bold" Margin="5"/>
-                                <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding Prenume}" FontSize="18" FontStyle="Italic" Margin="5"/>
+                            <Label x:Name="lblTelefon" Content="Telefon:" Grid.Row="2" Grid.Column="0" Margin="5" VerticalAlignment="Center"/>
+                            <TextBox x:Name="txtTelefon" Grid.Row="2" Grid.Column="1" Margin="5" Height="25"/>
+                            
+                            <Label x:Name="lblEmail" Content="Email:" Grid.Row="3" Grid.Column="0" Margin="5"/>
+                            <TextBox x:Name="txtEmail" Grid.Row="3" Grid.Column="1" Margin="5" Height="25"/>
 
-                                <TextBlock Grid.Row="3" Grid.Column="0" Text="Data Nasterii: " FontSize="18" FontWeight="Bold" Margin="5"/>
-                                <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding DataNasterii}" FontSize="18" FontStyle="Italic" Margin="5"/>
+                            <Label x:Name="lblDataNasterii" Content="Data Nașterii:" Grid.Row="4" Grid.Column="0" Margin="5"/>
+                            <TextBox x:Name="txtDataNasterii" Grid.Row="4" Grid.Column="1" Margin="5" Height="25"/>
+                            <StackPanel Orientation="Horizontal" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Right" Margin="5">
+                                <Button x:Name="btnAdauga" Content="Adaugă" Width="80" Margin="0,0,10,0" Click="btnAdauga_Click"/>
+                                <Button x:Name="btnReset" Content="Reset" Width="80" Click="btnReset_Click"/>
+                            </StackPanel>
+                        </Grid>
 
-                                <TextBlock Grid.Row="4" Grid.Column="0"  Text="Email: " FontSize="18" FontWeight="Bold" Margin="5"/>
-                                <TextBlock Grid.Row="4" Grid.Column="1" Text="{Binding Email}" FontSize="18" FontStyle="Italic" Margin="5"/>
+                        <TextBlock x:Name="lblMesajEroare" Foreground="Red" HorizontalAlignment="Center" FontWeight="Bold" Visibility="Collapsed" Margin="5"/>
+                        <Label x:Name="lblNrPacienti" Margin="5,15,5,0" FontWeight="Bold"/>
+                        <Label x:Name="lblPacienti" Margin="5" VerticalAlignment="Top"/>
+                    </StackPanel>
+                </GroupBox>
 
-                                <TextBlock Grid.Row="5" Grid.Column="0" Text="Telefon: " FontSize="18" FontWeight="Bold" Margin="5"/>
-                                <TextBlock Grid.Row="5" Grid.Column="1" Text="{Binding Telefon}" FontSize="18" FontStyle="Italic" Margin="5"/>
-                            </Grid>
-                        </DataTemplate>
-                    </ListBox.ItemTemplate>
-                </ListBox>
+                
             </StackPanel>
         </Border>
     </Grid>

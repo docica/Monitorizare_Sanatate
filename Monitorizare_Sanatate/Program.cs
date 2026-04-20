@@ -12,16 +12,7 @@ namespace Monitorizare_Sanatate
         static void Main(string[] args)
         {
             Console.WriteLine("Monitorizare sanatatii pacientilor");
-            Pacient pacient1 = new Pacient(1,"Rusu", "Luiza", new DateTime(1989,06,04) , "rusu_luiza@gmail.com", "0756337910");
-            MasuratoriGlicemie glicemie1 = new MasuratoriGlicemie(new DateTime(2024,08,10),  90, "mg/dl", pacient1);
-            MasuratoriCardiovasculare tensiune1 = new MasuratoriCardiovasculare(new DateTime(2024,08,10), 150, 90, 100, pacient1);
-            SistemeAlerta alerta = new SistemeAlerta();
-            alerta.VerificareGlicemie(glicemie1);
-            alerta.VerificareTensiune(tensiune1);
-            alerta.VerificarePuls(tensiune1);
-            Console.WriteLine(alerta.VerificareGlicemie(glicemie1));
-            Console.WriteLine(alerta.VerificareTensiune(tensiune1));
-            Console.WriteLine(pacient1.ToString() + "\n" + glicemie1.ToString() + "\n" + tensiune1.ToString());
+           
             string optiune;
             do
             {

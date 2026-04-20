@@ -9,6 +9,9 @@ namespace Monitorizare_Sanatate.Models
 {
     public class Pacient
     {
+        public const int LUNGIME_MAX_NUME = 15;
+        public const int LUNGIME_MAX_PRENUME = 15;
+        public const int CIFRE_TELEFON = 10;
         private const char SEPARATOR_PRINCIPAL_FISIER = ';';
         private const char SEPARATOR_SECUNDAR_FISIER = ' ';
         private const bool SUCCES = true;
