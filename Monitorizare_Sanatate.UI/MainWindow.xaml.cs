@@ -84,8 +84,6 @@ namespace Monitorizare_Sanatate.UI
             txtNume.Text = string.Empty;
             txtPrenume.Text = string.Empty;
             txtTelefon.Text = string.Empty;
-
-            // Resetăm și erorile vizuale
             txtNume.BorderBrush = Brushes.Gray;
             txtPrenume.BorderBrush = Brushes.Gray;
             txtTelefon.BorderBrush = Brushes.Gray;
