@@ -18,7 +18,7 @@ namespace Monitorizare_Sanatate
             string formatSalvare = ConfigurationManager.AppSettings[FORMAT_SALVARE] ?? "";
             string numeFisier = ConfigurationManager.AppSettings[NUME_FISIER] ?? "";
             string locatieFisierSolutie = Directory.GetParent(Directory.GetCurrentDirectory())?.Parent?.Parent?.FullName ?? "";
-            string caleCompletaFisier = locatieFisierSolutie + "\\" + numeFisier;
+            string caleCompletaFisier = "pacienti.txt";
             if(formatSalvare!=null)
             {
                 switch(formatSalvare)

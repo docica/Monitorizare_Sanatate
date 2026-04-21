@@ -16,6 +16,7 @@ namespace Monitorizare_Sanatate.Data
         public AdministrareStocareFisierText(string numeFisier)
         {
             this.numeFisier = numeFisier;
+            Console.WriteLine("Fisierul se salveaza in: " + numeFisier);
             using (Stream s=File.Open(numeFisier, FileMode.OpenOrCreate)) { }
         }
 

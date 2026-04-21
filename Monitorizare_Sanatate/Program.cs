@@ -7,7 +7,7 @@ namespace Monitorizare_Sanatate
     {
         static List<MasuratoriGlicemie> listaGlicemie = new List<MasuratoriGlicemie>();
         static List<MasuratoriCardiovasculare> listaTensiune = new List<MasuratoriCardiovasculare>();
-        static IStocareData admin = new AdministrareStocareFisierText("pacienti.txt");
+        static IStocareData admin = StocareFactory.GetAdministratorStocare();
         static Pacient pacientNou = null;
         static void Main(string[] args)
         {
@@ -163,7 +163,7 @@ namespace Monitorizare_Sanatate
                         break;
                 }
 
-            } while (optiune!="6");
+            } while (optiune!="9");
 
 
 
