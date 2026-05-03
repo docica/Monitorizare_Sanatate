@@ -1,5 +1,6 @@
 ﻿using Monitorizare_Sanatate.Data;
 using Monitorizare_Sanatate.Models;
+using Monitorizare_Sanatate.Models.Enums;
 
 namespace Monitorizare_Sanatate
 {
@@ -42,7 +43,11 @@ namespace Monitorizare_Sanatate
                         string email = Console.ReadLine();
                         Console.WriteLine("Introduceti numarul de telefon al pacientului: ");
                         string telefon = Console.ReadLine();
-                        pacientNou = new Pacient(idPacient, nume, prenume, dataNasterii, email, telefon);
+                        Console.WriteLine("Introduceti sexul (0-Nespecificat, 1-Masculin, 2-Feminin): ");
+                        Gen sex = (Gen)int.Parse(Console.ReadLine());
+                        Console.WriteLine("Introduceti simptomele (separate prin |): ");
+                        string simptome = Console.ReadLine();
+                        pacientNou = new Pacient(idPacient, nume, prenume, dataNasterii, email, telefon, sex, simptome);
                         admin.AddPacient(pacientNou);
                         Console.WriteLine("Informatiile despre pacient au fost salvate in fisier");
                         break;
