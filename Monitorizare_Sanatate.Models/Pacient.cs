@@ -22,8 +22,9 @@ namespace Monitorizare_Sanatate.Models
         private const int DATA_NASTERII = 3;
         private const int EMAIL = 4;
         private const int TELEFON = 5;
-        private const int SEX = 6;     
-        private const int SIMPTOME = 7;  
+        private const int SEX = 6;
+        private const int SIMPTOME = 7;
+        private const int DATA_ACTUALIZARE = 8;
         public int IdPacient { get; set; }
         public string Nume { get; set; }
         public string Prenume { get; set; }
@@ -32,6 +33,8 @@ namespace Monitorizare_Sanatate.Models
         public string Telefon { get; set; }
         public Gen Sex { get; set; }
         public string Simptome { get; set; }
+        public DateTime DataActualizare { get; set; }
+        public string NumeComplet =>$"{Nume } {Prenume }  (ID:{ IdPacient})";
 
         public Pacient(int idPacient, string nume, string prenume, DateTime dataNasterii, string email, string telefon, Gen sex, string simptome)
         {
@@ -43,6 +46,7 @@ namespace Monitorizare_Sanatate.Models
             Telefon = telefon;
             this.Sex = sex;
             this.Simptome = simptome;
+            DataActualizare = DateTime.Now;
 
         }
 
@@ -61,19 +65,29 @@ namespace Monitorizare_Sanatate.Models
             this.Telefon = dateFisier[TELEFON];
             this.Sex = (Gen)Enum.Parse(typeof(Gen), dateFisier[SEX]);
             this.Simptome = dateFisier[SIMPTOME];
+
+            if (dateFisier.Length > DATA_ACTUALIZARE)
+            {
+                this.DataActualizare = DateTime.Parse(dateFisier[DATA_ACTUALIZARE]);
+            }
+            else
+                this.DataActualizare = DateTime.Now;
         }
 
         public string ConversieLaSirPentruFisier()
         {
-                string obiectPacientPentrFisier = string.Format("{1}{0}{2}{0}{3}{0}{4}{0}{5}{0}{6}{0}{7}{0}{8}", SEPARATOR_PRINCIPAL_FISIER,
-                IdPacient.ToString(),
-                Nume ?? "NECUNOSCUT",
-                Prenume ?? "NECUNOSCUT",
-                DataNasterii.ToString(),
-                Email ?? "NECUNOSCUT",
-                Telefon ?? "NECUNOSCUT",
-                (int)Sex,
-                Simptome ?? "Niciunul");
+            string obiectPacientPentrFisier = string.Format("{1}{0}{2}{0}{3}{0}{4}{0}{5}{0}{6}{0}{7}{0}{8}{0}{9}", SEPARATOR_PRINCIPAL_FISIER,
+            IdPacient.ToString(),
+            Nume ?? "NECUNOSCUT",
+            Prenume ?? "NECUNOSCUT",
+            DataNasterii.ToString(),
+            Email ?? "NECUNOSCUT",
+            Telefon ?? "NECUNOSCUT",
+            (int)Sex,
+            Simptome ?? "Niciunul",
+
+            DataActualizare.ToString("yyyy-MM-dd HH:mm:ss"));
+
             return obiectPacientPentrFisier;
         }
         public override string ToString()

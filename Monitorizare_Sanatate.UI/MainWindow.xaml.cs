@@ -18,6 +18,7 @@ namespace Monitorizare_Sanatate.UI
            
             InitializeComponent();
             adminPacienti = StocareFactory.GetAdministratorStocare();
+            lstStatus.ItemsSource = new string[] { "Stabil", "Monitorizare", "Urgenta" };
             AfiseazaPacienti();
             
         }
@@ -26,6 +27,8 @@ namespace Monitorizare_Sanatate.UI
             List<Pacient> pacienti = adminPacienti.GetPacienti();
             lblNrPacienti.Content = $"Numar pacienti: {pacienti.Count}";
             lblPacienti.Content = "Pacienti:\n" + string.Join("\n", pacienti.Select(s => $"{s.IdPacient}: {s.Nume} {s.Prenume}"));
+            cmbPacienti.ItemsSource = null;
+            cmbPacienti.ItemsSource = pacienti;
         }
 
         private int ValideazaDatePacient(string nume, string prenume, DateTime dataNasterii, string email,string telefon)
@@ -155,6 +158,29 @@ namespace Monitorizare_Sanatate.UI
 
             return Gen.Nespecificat;
             
+        }
+
+        private void btnActualizeaza_Click(object sender, RoutedEventArgs e)
+        {
+            Pacient pacientSelectat = (Pacient)cmbPacienti.SelectedItem;
+            if(pacientSelectat!=null)
+            {
+                pacientSelectat.Simptome = txtSimptomeNoi.Text;
+                if(lstStatus.SelectedItem!=null)
+                    pacientSelectat.Simptome+="-Status: "+((ListBoxItem)lstStatus.SelectedItem).Content;
+                pacientSelectat.DataActualizare = DateTime.Now;
+                bool succes = adminPacienti.UpdatePacient(pacientSelectat);
+                if (succes)
+                {
+                    AfiseazaPacienti();
+                    MessageBox.Show("Pacientul a fost actualizat în fișier!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selectează un pacient!");
+            }
+        
         }
     }
     

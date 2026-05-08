@@ -30,15 +30,16 @@
                     Click="btnMeniu_Click"/>
         </StackPanel>
         <Grid Grid.Column="1">
-            <Border x:Name="pnlAdministrare"
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <Border x:Name="pnlAdministrare"
                     Visibility="Visible"
                     BorderBrush="#EAF6FB"
                     BorderThickness="15"
                     Margin="12">
-                
 
-                <StackPanel Margin="20">
-                    <TextBlock Text="Date pacient" 
+
+                    <StackPanel Margin="20">
+                        <TextBlock Text="Date pacient" 
                                FontSize="24"
                                FontWeight="Bold" 
                                Foreground="Navy"
@@ -46,140 +47,168 @@
                                Margin="0, 0, 0, 20"/>
 
 
-                    <GroupBox Header="Adăugare Pacient" Margin="0,0,0,20" Padding="10">
-                        <StackPanel>
-                            <Grid HorizontalAlignment="Center">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
+                        <GroupBox Header="Adăugare Pacient" Margin="0,0,0,20" Padding="10">
+                            <StackPanel>
+                                <Grid HorizontalAlignment="Center">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
 
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="100"/>
-                                    <ColumnDefinition Width="250"/>
-                                </Grid.ColumnDefinitions>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="250"/>
+                                    </Grid.ColumnDefinitions>
 
-                                <Label x:Name="lblNume" Content="Nume:" Grid.Row="0" Grid.Column="0" Margin="5" VerticalAlignment="Center"/>
-                                <TextBox x:Name="txtNume" Grid.Row="0" Grid.Column="1" Margin="5" Height="25"/>
+                                    <Label x:Name="lblNume" Content="Nume:" Grid.Row="0" Grid.Column="0" Margin="5" VerticalAlignment="Center"/>
+                                    <TextBox x:Name="txtNume" Grid.Row="0" Grid.Column="1" Margin="5" Height="25"/>
 
-                                <Label x:Name="lblPrenume" Content="Prenume:" Grid.Row="1" Grid.Column="0" Margin="5" VerticalAlignment="Center"/>
-                                <TextBox x:Name="txtPrenume" Grid.Row="1" Grid.Column="1" Margin="5" Height="25"/>
+                                    <Label x:Name="lblPrenume" Content="Prenume:" Grid.Row="1" Grid.Column="0" Margin="5" VerticalAlignment="Center"/>
+                                    <TextBox x:Name="txtPrenume" Grid.Row="1" Grid.Column="1" Margin="5" Height="25"/>
 
-                                <Label x:Name="lblTelefon" Content="Telefon:" Grid.Row="2" Grid.Column="0" Margin="5" VerticalAlignment="Center"/>
-                                <TextBox x:Name="txtTelefon" Grid.Row="2" Grid.Column="1" Margin="5" Height="25"/>
+                                    <Label x:Name="lblTelefon" Content="Telefon:" Grid.Row="2" Grid.Column="0" Margin="5" VerticalAlignment="Center"/>
+                                    <TextBox x:Name="txtTelefon" Grid.Row="2" Grid.Column="1" Margin="5" Height="25"/>
 
-                                <Label x:Name="lblEmail" Content="Email:" Grid.Row="3" Grid.Column="0" Margin="5"/>
-                                <TextBox x:Name="txtEmail" Grid.Row="3" Grid.Column="1" Margin="5" Height="25"/>
+                                    <Label x:Name="lblEmail" Content="Email:" Grid.Row="3" Grid.Column="0" Margin="5"/>
+                                    <TextBox x:Name="txtEmail" Grid.Row="3" Grid.Column="1" Margin="5" Height="25"/>
 
-                                <Label x:Name="lblDataNasterii" Content="Data Nașterii:" Grid.Row="4" Grid.Column="0" Margin="5"/>
-                                <TextBox x:Name="txtDataNasterii" Grid.Row="4" Grid.Column="1" Margin="5" Height="25"/>
+                                    <Label x:Name="lblDataNasterii" Content="Data Nașterii:" Grid.Row="4" Grid.Column="0" Margin="5"/>
+                                    <TextBox x:Name="txtDataNasterii" Grid.Row="4" Grid.Column="1" Margin="5" Height="25"/>
 
-                                <StackPanel Grid.Row="5" 
+                                    <StackPanel Grid.Row="5" 
                                             Grid.Column="0"
                                             Grid.ColumnSpan="2"
                                             Margin="5">
-                                    <Label Content="Gen: "
+                                        <Label Content="Gen: "
                                            FontWeight="Bold"
                                            Padding="0"
                                            Margin="0,0,0,6"/>
-                                    <StackPanel Orientation="Horizontal">
-                                        <RadioButton x:Name="rbNespecificat"
+                                        <StackPanel Orientation="Horizontal">
+                                            <RadioButton x:Name="rbNespecificat"
                                                      Content="Nespecificat"
                                                      IsChecked="True"
                                                      Margin="0,0,20,0"/>
-                                        <RadioButton x:Name="rbMasculin"
+                                            <RadioButton x:Name="rbMasculin"
                                                      Content="Masculin"
                                                      Margin="0,0,20,0"/>
-                                        <RadioButton x:Name="rbFeminin"
+                                            <RadioButton x:Name="rbFeminin"
                                                      Content="Feminin"
                                                      Margin="0,0,20,0"/>
-                                        
-                                    </StackPanel>
-                                </StackPanel>
 
-                                <StackPanel Grid.Row="6"
+                                        </StackPanel>
+                                    </StackPanel>
+
+                                    <StackPanel Grid.Row="6"
                                             Grid.Column="0"
                                             Grid.ColumnSpan="2"
                                             Margin="5">
-                                    <Label Content="Simptome glicemie: "
+                                        <Label Content="Simptome glicemie: "
                                            FontWeight="Bold"
                                            Padding="0"
                                            Margin="0,0,0,6">
-                                    </Label>
-                                    <StackPanel Orientation="Horizontal">
-                                        <CheckBox x:Name="cbAmeteala"
+                                        </Label>
+                                        <StackPanel Orientation="Horizontal">
+                                            <CheckBox x:Name="cbAmeteala"
                                                   Content="Ameteala"
                                                   Margin="0,0,20,0"
                                                   Checked="Simptome_CheckedChanged"
                                                   Unchecked="Simptome_CheckedChanged"/>
-                                        <CheckBox x:Name="cbTremur"
+                                            <CheckBox x:Name="cbTremur"
                                                   Content="Tremur"
                                                   Margin="0,0,20,0"
                                                   Checked="Simptome_CheckedChanged"
                                                   Unchecked="Simptome_CheckedChanged"/>
-                                        <CheckBox x:Name="cbTranspiratie"
+                                            <CheckBox x:Name="cbTranspiratie"
                                                      Content="Transpiratie"
                                                      Margin="0,0,20,0"
                                                      Checked="Simptome_CheckedChanged"
                                                      Unchecked="Simptome_CheckedChanged"/>
-                                        
-                                    </StackPanel>
-                                           
-                                </StackPanel>
 
-                                <StackPanel Grid.Row="7"
+                                        </StackPanel>
+
+                                    </StackPanel>
+
+                                    <StackPanel Grid.Row="7"
                                             Grid.Column="0"
                                             Grid.ColumnSpan="2"
                                             Margin="5">
-                                    <Label Content="Simptome tensiune: "
+                                        <Label Content="Simptome tensiune: "
                                            FontWeight="Bold"
                                            Padding="0"
                                            Margin="0,0,0,6">
-                                    </Label>
-                                    <StackPanel Orientation="Horizontal">
-                                        <CheckBox x:Name="cbDurereDeCap"
+                                        </Label>
+                                        <StackPanel Orientation="Horizontal">
+                                            <CheckBox x:Name="cbDurereDeCap"
                                                   Content="Durere de cap"
                                                   Margin="0,0,20,0"
                                                   Checked="Simptome_CheckedChanged"
                                                   Unchecked="Simptome_CheckedChanged"/>
-                                        
-                                        <CheckBox x:Name="cbPalpitatii"
+
+                                            <CheckBox x:Name="cbPalpitatii"
                                                   Content="Palpitatii"
                                                   Margin="0,0,20,0"
                                                   Checked="Simptome_CheckedChanged"
                                                   Unchecked="Simptome_CheckedChanged"/>
-                                        <CheckBox x:Name="cbOboseala"
+                                            <CheckBox x:Name="cbOboseala"
                                                   Content="Oboseala"
                                                   Margin="0,0,20,0"
                                                   Checked="Simptome_CheckedChanged"
                                                   Unchecked="Simptome_CheckedChanged"/>
+                                        </StackPanel>
+
                                     </StackPanel>
 
-                                </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Grid.Row="8" Grid.Column="1" HorizontalAlignment="Right" Margin="5">
+                                        <Button x:Name="btnAdauga" Content="Adaugă" Width="80" Margin="0,0,10,0" Click="btnAdauga_Click"/>
+                                        <Button x:Name="btnReset" Content="Reset" Width="80" Click="btnReset_Click"/>
+                                    </StackPanel>
+                                </Grid>
 
-                                <StackPanel Orientation="Horizontal" Grid.Row="8" Grid.Column="1" HorizontalAlignment="Right" Margin="5">
-                                    <Button x:Name="btnAdauga" Content="Adaugă" Width="80" Margin="0,0,10,0" Click="btnAdauga_Click"/>
-                                    <Button x:Name="btnReset" Content="Reset" Width="80" Click="btnReset_Click"/>
-                                </StackPanel>
-                            </Grid>
+                                <TextBlock x:Name="lblMesajEroare" Foreground="Red" HorizontalAlignment="Center" FontWeight="Bold" Visibility="Collapsed" Margin="5"/>
+                                <Label x:Name="lblNrPacienti" Margin="5,15,5,0" FontWeight="Bold"/>
+                                <Label x:Name="lblPacienti" Margin="5" VerticalAlignment="Top"/>
+                            </StackPanel>
+                        </GroupBox>
 
-                            <TextBlock x:Name="lblMesajEroare" Foreground="Red" HorizontalAlignment="Center" FontWeight="Bold" Visibility="Collapsed" Margin="5"/>
-                            <Label x:Name="lblNrPacienti" Margin="5,15,5,0" FontWeight="Bold"/>
-                            <Label x:Name="lblPacienti" Margin="5" VerticalAlignment="Top"/>
-                        </StackPanel>
-                    </GroupBox>
+                        <GroupBox Header=" Modificare Pacient" Margin="0,10">
+                            <StackPanel>
+                                <Label Content="Selecteaza Pacient: "/>
+                                <ComboBox x:Name="cmbPacienti" 
+                                      DisplayMemberPath="NumeComplet"
+                                      Margin="5"/>
+                                <Label Content="Diagnostic: "/>
+                                <ListBox x:Name="lstStatus"
+                                     Height="60"
+                                     Margin="5">
+
+                                </ListBox>
+
+                                <Label Content="Actualizare Simptome: "/>
+                                <TextBox x:Name="txtSimptomeNoi" 
+                                     Height="30"
+                                     Margin="5"/>
+                                <Button x:Name="btnActualizeaza"
+                                    Content="ACTUALIZEAZA"
+                                    Click="btnActualizeaza_Click"
+                                    Background="LightGreen"
+                                    Margin="5"/>
+
+                            </StackPanel>
+
+                        </GroupBox>
 
 
-                </StackPanel>
-            </Border>
+                    </StackPanel>
+                </Border>
+            </ScrollViewer>
             <Border x:Name="pnlCautare" Visibility="Collapsed" BorderBrush="#EAF6FB" BorderThickness="15" Margin="12">
                 <StackPanel Margin="20">
                     <TextBlock Text="Căutare Pacient" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
